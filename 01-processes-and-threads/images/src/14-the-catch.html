@@ -1,0 +1,5 @@
+<div class="card ">
+<div class="title">Where the trouble starts</div>
+<div class="row" style=""><div class="cell blue" style="flex:1;min-width:0px"><div class="big">Thread A</div><div class="small"><code>totalRequests++</code></div></div><div class="cell orange" style="flex:1;min-width:0px"><div class="big">Thread B</div><div class="small"><code>totalRequests++</code></div></div></div><div class="arrow">↓</div><div class="row" style=""><div class="cell red" style="flex:1;min-width:0px"><div class="big"><code>totalRequests</code></div><div class="small">one int in shared memory</div></div></div>
+<div class="caption">Two threads changing the same variable at the same time can lose updates. That's Module 3.</div>
+</div>

@@ -1,0 +1,5 @@
+<div class="card ">
+<div class="title">Why thread 1 and thread 2 are 8196 KiB apart</div>
+<div class="row" style=""><div class="cell blue" style="flex:1;min-width:0px"><div class="big">thread 1 stack</div><div class="small">8192 KiB, <code>rw-p</code><br><code>clientId</code> at …58ffeb8c</div></div></div><div class="row" style=""><div class="cell red" style="flex:1;min-width:0px"><div class="big">guard page</div><div class="small">4 KiB, <code>---p</code>: no access</div></div></div><div class="row" style=""><div class="cell blue" style="flex:1;min-width:0px"><div class="big">thread 2 stack</div><div class="small">8192 KiB, <code>rw-p</code><br><code>clientId</code> at …587fdb8c</div></div></div>
+<div class="caption">Higher addresses at the top. Each new thread gets an 8 MiB stack (the default from <code>ulimit -s</code>) with a 4 KiB guard page below it, so running off the end of a stack faults instead of writing into the next one.</div>
+</div>

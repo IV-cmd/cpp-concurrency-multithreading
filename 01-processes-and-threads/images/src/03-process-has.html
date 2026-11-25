@@ -1,0 +1,5 @@
+<div class="card ">
+<div class="title">What a process owns</div>
+<table class="t"><tr><th>Resource</th><th>What it is</th><th>Where I can see it on Linux</th></tr><tr><td>virtual address space</td><td>the memory layout the program sees: code, data, heap, stacks</td><td><code>/proc/&lt;pid&gt;/maps</code></td></tr><tr><td>file descriptors</td><td>numbers referring to open files, sockets, pipes</td><td><code>/proc/&lt;pid&gt;/fd/</code></td></tr><tr><td>process information</td><td>pid, parent, user, limits, signal handlers</td><td><code>/proc/&lt;pid&gt;/status</code></td></tr><tr><td>one or more threads</td><td>the things that actually run instructions</td><td><code>/proc/&lt;pid&gt;/task/</code></td></tr></table>
+
+</div>

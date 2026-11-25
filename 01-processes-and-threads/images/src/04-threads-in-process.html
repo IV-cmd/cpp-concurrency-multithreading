@@ -1,0 +1,5 @@
+<div class="card ">
+<div class="title">One storage server process, four threads</div>
+<div class="row" style=""><div class="cell purple" style="flex:1;min-width:0px"><div class="big">storage server process</div><div class="small">one address space, one fd table, one pid</div></div></div><div class="arrow">↓</div><div class="row" style=""><div class="cell blue" style="flex:1;min-width:0px"><div class="big">Thread 1</div><div class="small">handles Client A<br>(read 10 GB)</div></div><div class="cell green" style="flex:1;min-width:0px"><div class="big">Thread 2</div><div class="small">handles Client B<br>(write 5 GB)</div></div><div class="cell orange" style="flex:1;min-width:0px"><div class="big">Thread 3</div><div class="small">handles Client C<br>(exists?)</div></div><div class="cell gray" style="flex:1;min-width:0px"><div class="big">Thread 4</div><div class="small">monitors disk health</div></div></div>
+<div class="caption">All four run the same program with the same memory. Each one is at a different point in the code.</div>
+</div>

@@ -1,0 +1,5 @@
+<div class="card ">
+<div class="title">Process vs thread</div>
+<table class="t"><tr><th></th><th>Process</th><th>Thread</th></tr><tr><td>What it is</td><td>a running instance of a program</td><td>an execution path inside a process</td></tr><tr><td>Memory</td><td>its own virtual address space</td><td>shares the process's address space</td></tr><tr><td>Owns</td><td>fds, pid, memory map, limits</td><td>a stack, registers, a program counter</td></tr><tr><td>Linux id</td><td>pid (<code>getpid()</code>)</td><td>tid (<code>gettid()</code>), same pid as its process</td></tr><tr><td>Creating one</td><td>more work: a new address space</td><td>less work: a new stack and kernel task</td></tr><tr><td>Talking to another</td><td>pipes, sockets, shared memory</td><td>just read and write the same variables</td></tr></table>
+
+</div>
